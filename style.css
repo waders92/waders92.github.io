@@ -1,0 +1,393 @@
+.thumbnail {
+  transition: all .2s ease-in-out;
+}
+
+.thumbnail:hover {
+  transform: scale(1.025);
+  background-color: #FAFAFA;
+}
+
+.top a {
+  padding: 15px;
+  margin: 5px;
+  font-family: 'Mukta Vaani', sans-serif;
+  font-size: 18px;
+  color: white;
+}
+
+.top1 a:hover {
+  text-decoration: none;
+  color: #677077;
+}
+
+.top1 a {
+  padding: 15px;
+  margin: 5px;
+  font-family: 'Mukta Vaani', sans-serif;
+  font-size: 18px;
+  color: white;
+}
+
+.top a:hover {
+  text-decoration: none;
+  color: #677077;
+}
+
+#top {
+  background-color: #133E69;
+}
+
+.roboto1 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+}
+
+.roboto2 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+}
+.navbar {
+  background-color: #133E69;
+}
+
+ul.nav.navbar-nav.navbar-right li a {
+  color: white;
+}
+
+ul.nav.navbar-nav.navbar-right li a:hover {
+  color: gray;
+}
+
+button.navbar-toggle.collapsed {
+  background-color: white;
+}
+
+.navbar-toggle .icon-bar {
+  background-color: #133E69;
+}
+
+.bottom a {
+  padding: 15px;
+  margin: 5px;
+  font-family: 'Mukta Vaani', sans-serif;
+  font-size: 18px;
+  color: white;
+}
+
+.bottom a:hover {
+  text-decoration: none;
+  color: #2C4D49;
+}
+
+.top {
+  padding-top: 25px;
+}
+
+.me img {
+  height: 150px;
+  width: 150px;
+  border-radius: 100%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.name p {
+  font-size: 50px;
+  color: white;
+  font-family: 'Roboto', sans-serif;
+}
+
+.bottom {
+  padding-bottom: 75px;
+}
+
+.examples {
+  padding-bottom: 100px;
+}
+
+.clr {
+  clear: both;
+}
+
+.images {
+  margin-top: 300px;
+}
+
+.bg {
+  height: 1500px;
+  background-color: #1D446B;
+}
+
+.about {
+  background-color: #1D446B;
+  height: 1400px;
+  margin-bottom: 100px;
+}
+
+.golf {
+  width: 100%;
+}
+
+.contact {
+  height: 1000px;
+  margin-bottom: 100px;
+  margin-top: 150px;
+}
+
+.about h3 {
+  color: white;
+}
+
+.info p {
+  font-size: 20px;
+  color: white;
+}
+
+.caption p{
+  font-size: 15px;
+}
+
+.fh {
+  color: #c2c2c2;
+}
+
+.fl {
+  color: red;
+}
+
+.split a {
+  color: lightgrey;
+}
+
+.split a:hover {
+  text-decoration: none;
+  color: #631D29;
+}
+
+.split h3 {
+  color: #1D446B;
+  padding-top: 100px;
+}
+
+.split2 {
+  margin-top: 100px;
+  margin-bottom: 50px;
+}
+
+.split2 a {
+  color: rgba(228, 235, 237, 0.6);
+}
+
+.split2 a:hover {
+  text-decoration: none;
+  color: #2C4D49;
+}
+
+.split2 h3 {
+  color: snow;
+  padding-top: 100px;
+}
+
+.contact h3 {
+  color: #1D446B;
+  padding-top: 75px;
+}
+
+.contact p {
+  font-family: 'Mukta Vaani', sans-serif;
+  font-size: 16px;
+  letter-spacing: 2px;
+  margin-top: 80px;
+}
+
+.bio {
+  font-size: 24px;
+  font-family: 'Open Sans Condensed', sans-serif;
+  color: white;
+  letter-spacing: 2px;
+}
+
+.topbio {
+  margin-top: 100px;
+}
+
+.hr {
+  width: 250px;
+}
+
+.skills img {
+  height: 100px;
+  width: 250px;
+  margin: 10px;
+}
+
+.skills h3 {
+  color: #303E42;
+}
+
+.icons img {
+  height: 50px;
+  width: 50px;
+  margin: 25px;
+  margin-top: 100px;
+  transition: all .2s ease-in-out;
+}
+
+.icons img:hover {
+  transform: scale(1.35);
+}
+
+.slogan h1 {
+  font-family: 'Reenie Beanie', cursive;
+  font-size: 4em;
+  color: white;
+}
+
+.name img {
+  height: 200px;
+  width: 200px;
+  border-radius: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.about p {
+  color: white;
+  font-size: 18px;
+  font-family: 'Open Sans Condensed', sans-serif;
+}
+
+p.text-center.job {
+  font-size: 18px;
+}
+
+#cf {
+  position:relative;
+  height:300px;
+  width:300px;
+  margin:0 auto;
+}
+
+#cf img {
+  position:absolute;
+  left:0;
+  -webkit-transition: opacity 1s ease-in-out;
+  -moz-transition: opacity 1s ease-in-out;
+  -o-transition: opacity 1s ease-in-out;
+  transition: opacity 1s ease-in-out;
+}
+
+#cf img.top:hover {
+  opacity:0;
+}
+
+.slogan p {
+  margin-top: 25px;
+  font-family: 'Reenie Beanie', cursive;
+  font-size: 3em;
+}
+
+.lastarrow {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/******* ipad *********/
+@media only screen
+  and (min-device-width: 768px)
+  and (max-device-width: 1024px)
+  and (orientation: portrait)
+  and (-webkit-min-device-pixel-ratio: 1) {
+    .contact h3 {
+      color: #1D446B;
+      padding-top: 105px;
+    }
+}
+/******* iphone 6 *********/
+@media only screen
+  and (min-device-width: 375px)
+  and (max-device-width: 667px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+    .icons img {
+      height: 30px;
+      width: 30px;
+      margin: 15px;
+      margin-top: 100px;
+    }
+    .split h3 {
+      color: #1D446B;
+      padding-top: 175px;
+    }
+    .split2 h3 {
+      color: snow;
+      padding-top: 175px;
+    }
+    .contact h3 {
+      color: #1D446B;
+      padding-top: 125px;
+    }
+    .contact {
+      height: 500px;
+      margin-bottom: 10px;
+    }
+}
+/******* iphone 5 *********/
+@media only screen
+  and (min-device-width: 320px)
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+    .icons img {
+      height: 20px;
+      width: 20px;
+      margin: 5px;
+      margin-top: 100px;
+    }
+    .split h3 {
+      color: #1D446B;
+      padding-top: 175px;
+    }
+    .split2 h3 {
+      color: snow;
+      padding-top: 175px;
+    }
+    .contact h3 {
+      color: #1D446B;
+      padding-top: 125px;
+    }
+    .contact {
+      height: 500px;
+      margin-bottom: 10px;
+    }
+}
+
+/* Landscape */
+@media only screen
+  and (min-device-width: 320px)
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) {
+    .icons img {
+      height: 30px;
+      width: 30px;
+      margin: 15px;
+      margin-top: 100px;
+    }
+    .split h3 {
+      color: #1D446B;
+      padding-top: 175px;
+    }
+    .split2 h3 {
+      color: snow;
+      padding-top: 175px;
+    }
+    .contact h3 {
+      color: #1D446B;
+      padding-top: 125px;
+    }
+    .contact {
+      height: 500px;
+      margin-bottom: 10px;
+    }
+}
