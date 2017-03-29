@@ -141,6 +141,7 @@ button.navbar-toggle.collapsed {
 
 .caption p{
   font-size: 15px;
+  font-family: 'Mukta Vaani', sans-serif;
 }
 
 .fh {
@@ -266,6 +267,7 @@ p.text-center.job {
   margin-left: auto;
   margin-right: auto;
 }
+
 
 /******* ipad *********/
 @media only screen
