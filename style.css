@@ -124,6 +124,10 @@ button.navbar-toggle.collapsed {
   width: 100%;
 }
 
+.golf img {
+   box-shadow: 0px 3px 8px #2a2a2a;
+}
+
 .contact {
   height: 1000px;
   margin-bottom: 100px;
