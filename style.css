@@ -25,7 +25,7 @@
 }
 
 #top {
- background-color: rgba(14, 41, 62, 1);
+  background-color: rgba(14, 41, 62, 1);
 }
 
 .roboto1 {
@@ -124,10 +124,6 @@ button.navbar-toggle.collapsed {
   width: 100%;
 }
 
-.golf img {
-   box-shadow: 0px 3px 8px #2a2a2a;
-}
-
 .contact {
   height: 1000px;
   margin-bottom: 100px;
@@ -208,6 +204,15 @@ button.navbar-toggle.collapsed {
   letter-spacing: 2px;
 }
 
+.bio a {
+  color: #D4BA26;
+}
+
+.bio a:hover {
+  text-decoration: none;
+  color: #F7E163;
+}
+
 .topbio {
   margin-top: 100px;
 }
@@ -272,6 +277,9 @@ p.text-center.job {
   margin-right: auto;
 }
 
+.golf img {
+   box-shadow: 0px 3px 8px #2a2a2a;
+}
 
 /******* ipad *********/
 @media only screen
