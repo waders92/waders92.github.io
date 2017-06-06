@@ -254,6 +254,9 @@ button.navbar-toggle.collapsed {
   width: 250px;
   margin-left: auto;
   margin-right: auto;
+  border-radius: 100%;
+  border: 1px solid whitesmoke;
+  background-color: whitesmoke;
 }
 
 .about p {
