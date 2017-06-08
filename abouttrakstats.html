@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang ="en">
+<head>
+  <title>Wade Carlson</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed|Mukta+Vaani|Reenie+Beanie|Open+Sans+Condensed:300|Roboto:300,400,500" rel="stylesheet">
+<link
+      rel="stylesheet"
+      href="prism-atom-dark.css"
+      type="text/css"
+      media="screen"
+    />
+
+    <script type="text/javascript" src="prism.js"></script>
+    <script type="text/javascript" src="prism.ruby.js"></script>
+
+</head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="scroll.js"></script>
+<body>
+  <nav class="navbar navbar-default navbar-fixed-top" role="navigation" id="top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+      <div class="collapse navbar-collapse top1" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a class="pull-right" href="index.html">back to portfolio</a></li>
+       </ul>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav>
+  <div class="container case">
+    <h3 class="text-center case-study-h">case study: trakstats</h3>
+    <hr class="blue" />
+    <br /><br /><br />
+    <p class="case-study-text">
+      Trakstats was built as a way for me to apply what I was learning with Ruby on Rails. This application was built
+      completely from scratch and was an original idea.<br /><br />
+      My first conception of this application was simple...keep track of your golf stats. The application would track...
+    </p>
+    <ul>
+      <li class="case-study-text">
+        Scoring Average
+      </li>
+      <li class="case-study-text">
+        Driving Accuracy
+      </li>
+      <li class="case-study-text">
+        Green's Hit Percentage
+      </li>
+      <li class="case-study-text">
+        Putting Average
+      </li>
+      <li class="case-study-text">
+        Total Birdies
+      </li>
+      <li class="case-study-text">
+        Total Pars
+      </li>
+    </ul>
+    <p class=case-study-text>
+      <br />
+      Little did I know that it would evlove and change as much as it has. Now that it is complete, I can reflect on all of it's features -
+    </p>
+    <ul>
+      <li class="case-study-text">
+        User Authentication
+      </li>
+      <li class="case-study-text">
+        Written with Test Driven Development - RSpec, FactoryGirl
+      </li>
+      <li class="case-study-text">
+        Notification Mailers (Round Entry, Lesson Uploads, Lesson Ready For Viewing)
+      </li>
+      <li class="case-study-text">
+        Stripe Payments for Online Video Lessons
+      </li>
+      <li class="case-study-text">
+        Video Uploading Feature (Lessons)
+      </li>
+      <li class="case-study-text">
+        Amazon Web Services (Video hosting)
+      </li>
+      <li class="case-study-text">
+        Rankings Structure
+      </li>
+      <li class="case-study-text">
+        Leaderboard Feature
+      </li>
+      <li class="case-study-text">
+        Git for Version Control
+      </li>
+      <li class="case-study-text">
+        Launched on Heroku
+      </li>
+    </ul>
+
+    <p class="case-study-text">
+      <br />
+      But I started small. I was building an application that would keep track of your golf stats. To do this, I would need to use Ruby's Active Record Calculations to help me keep track of these averages.
+      Here is the code from the ScoringAvearge Module.
+      <br /><br />
+    </p>
+    <h3 class="text-center case-study-h">scoring_average.rb</h3>
+    <br />
+    <div class="box">
+    <pre><code class="language-ruby">
+        module ScoringAverage
+
+          def scoring_average
+            rounds.average(:score)
+          end
+
+          def scoring_average_rounded
+            scoring_average.round(2)
+          end
+
+          def scoring_average_nine_holes
+            nineholerounds.average(:score)
+          end
+
+          def scoring_average_nine_holes_rounded
+            scoring_average_nine_holes.round(2)
+          end
+
+          def users_best_score_nine_holes
+            low_round = []
+            nineholerounds.each do |nineholeround|
+              low_round &lt;&lt; nineholeround.score
+            end
+            low_round.sort.shift
+          end
+
+          def users_best_score
+            low_round = []
+            rounds.each do |round|
+              low_round &lt;&lt; round.score
+            end
+            low_round.sort.shift
+          end
+        end</code></pre>
+    </div>
+    <p class="case-study-text">
+      <br />
+      As I continued to work on the application, I thought it would be great if users could see how they ranked against other users.
+      Golfers like to compete and it is nice to see where you stand in relation to other players. Here is the code from the rounds helper file that helps to calculate a particular users
+      scoring rank as well as who has the best scoring average.
+      <br /><br />
+    </p>
+    <h3 class="text-center case-study-h">rounds_helper.rb</h3>
+    <br />
+    <div class="box">
+    <pre><code class="language-ruby">
+      module RoundsHelper
+        def scoring_rank
+          Round.group(:user).average(:score)
+        end
+
+        def scoring_rank_with_index
+          scoring_rank.sort_by { |_k, v| +v }.each.with_index(1) do |(user, avg), i|
+            yield([user, avg], i)
+          end
+        end
+
+        def best_scoring_rank_with_index
+          scoring_rank_with_index do |(user, avg), _i|
+            return [user, avg.round(2)]
+          end
+        end
+        </code></pre>
+      </div>
+      <p class="case-study-text">
+        <br />
+        So at this point I have a User Dashboard that keeps track of the individual user stats and I have a Rankings section that
+        shows you where you stand against other players. I expanded on the ranking section and I added a Leaderboard feature. What this will
+        do is scroll through all the rankings and just show who is leading each of the categories. I used a carousel to display the information.
+        <br />
+      </p>
+      <h3 class="text-center case-study-h">leaderboard carousel</h3>
+      <br />
+      <div class="box">
+        <pre><code class="language-ruby">
+  &lt;div id=&quot;carousel-example-generic&quot; class=&quot;carousel slide carousel-fade&quot; data-ride=&quot;carousel&quot;&gt;
+    &lt;div class=&quot;carousel-inner&quot;&gt;
+      &lt;div class=&quot;item active text-center&quot;&gt;
+        &lt;p&gt;
+          &lt;% user, rank = best_scoring_rank_with_index %&gt;
+          &lt;b&gt;Scoring Average -&lt;/b&gt; &lt;%= user.name %&gt;
+          (&lt;%= rank %&gt;)
+        &lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;item text-center&quot;&gt;
+        &lt;p&gt;
+          &lt;% user, rank = best_greens_rank_with_index %&gt;
+          &lt;b&gt;Greens In Regulation -&lt;/b&gt; &lt;%= user.name %&gt;
+          (&lt;%= rank %&gt;)
+        &lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;item text-center&quot;&gt;
+        &lt;p&gt;
+          &lt;% user, rank = best_faiwrways_rank_with_index %&gt;
+          &lt;b&gt;Fairways Hit -&lt;/b&gt; &lt;%= user.name %&gt;
+          (&lt;%= rank %&gt;)
+        &lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;item text-center&quot;&gt;
+        &lt;p&gt;
+          &lt;% user, rank = best_putting_rank_with_index %&gt;
+          &lt;b&gt;Putting Average -&lt;/b&gt; &lt;%= user.name %&gt;
+          (&lt;%= rank %&gt;)
+        &lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;item text-center&quot;&gt;
+        &lt;p&gt;
+          &lt;% user, rank = best_birdies_rank_with_index %&gt;
+          &lt;b&gt;Birdie Average -&lt;/b&gt; &lt;%= user.name %&gt;
+          (&lt;%= rank %&gt;)
+        &lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;item text-center&quot;&gt;
+        &lt;p&gt;
+          &lt;% user, rank = best_pars_rank_with_index %&gt;
+          &lt;b&gt;Par Average -&lt;/b&gt; &lt;%= user.name %&gt;
+          (&lt;%= rank %&gt;)
+        &lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;</code></pre>
+      </div>
+      <p class="case-study-text">
+        <br />
+        About half way through the construction of this application I added the ability for users to upload a video for a lesson. I have been a PGA professional
+        for 15 years so I thought it would be cool if users could have this accessability. I added
+        the lesson field to the database and made it possible for users to create online lessons and add videos, checking out their purchase with the Stripe Payment System.
+        <br /><br />
+      </p>
+      <h3 class="text-center case-study-h">lesson and charges controller</h3>
+      <br />
+      <div class="box">
+        <pre><code class="language-ruby">
+class LessonsController &lt; ApplicationController
+  before_action :authenticate_user!
+  before_action :set_cache_headers
+
+  def new
+    payment_required
+    @lesson = Lesson.new
+  end
+
+  def edit
+    @lesson = Lesson.find_by(id: params[:id])
+  end
+
+  def update
+    @lesson = Lesson.find_by(id: params[:id])
+    @lesson.update_attributes(lesson_params)
+    redirect_to admin_path
+  end
+
+  def create
+    @lesson = current_user.lessons.create(lesson_params)
+    if @lesson.valid?
+      current_user.update(subscribed: false)
+      redirect_to lessons_path
+      flash[:error] = 'Thanks for submitting your lesson, I will check it out shortly!'
+    else
+      render :new, status: :unprocessable_entity
+    end
+  end
+
+  private
+
+  def payment_required
+    unless current_user.subscribed?
+      redirect_to lessons_path
+      flash[:error] = 'You must complete the checkout process to submit an online lesson!'
+    end
+  end
+
+  def lesson_params
+    params.require(:lesson).permit(:video, :caption, :advice)
+  end
+end
+
+
+class ChargesController &lt; ApplicationController
+  layout 'application'
+  def new
+    unless user_signed_in?
+      redirect_to new_user_session_path
+      flash[:error] = 'You must be signed-in!'
+    end
+  end
+
+  def create
+    # Amount in cents
+    @amount = 3000
+
+    customer = Stripe::Customer.create(
+      email: current_user.email,
+      source: params[:stripeToken]
+    )
+
+    charge = Stripe::Charge.create(
+      customer: customer.id,
+      amount: @amount,
+      description: 'TrakStats Lesson',
+      currency: 'usd'
+    )
+    current_user.update(subscribed: true)
+    redirect_to new_lesson_path
+  rescue Stripe::CardError =&gt; e
+    flash[:error] = e.message
+    redirect_to root_path
+  end
+end
+</code></pre>
+      </div>
+      <p class="case-study-text">
+        <br />
+        The code that I had written was tested as well using RSpec and FactoryGirl. Here is a sample of the test code that checks for
+        round creation and the ability for a user to delete a round. In total the application has around 30 tests for controller and model actions.
+        <br />
+      </p>
+      <h3 class="text-center case-study-h">spec testing</h3>
+      <br />
+      <div class="box">
+        <pre><code class="language-ruby">
+require 'rails_helper'
+
+RSpec.describe RoundsController, type: :controller do
+  describe 'rounds#create action' do
+    it 'creates a new round in the database' do
+      user = FactoryGirl.create(:user)
+      sign_in user
+      round = FactoryGirl.create(:round)
+
+      post :create, round: { course: 'Test course' }
+      expect(response).to redirect_to dashboard_path
+      round = Round.last
+      expect(round.course).to eq 'Test course'
+      expect(round.user).to eq(round.user)
+    end
+
+    it 'should deal with errors correctly' do
+      post :create, params: { round: { course: '' } }
+      expect(Round.count).to eq 0
+    end
+  end
+
+  describe 'rounds#destroy action' do
+    it 'allows the round owner to delete a round in the database' do
+      user = FactoryGirl.create(:user)
+      round = FactoryGirl.create(:round)
+      sign_in user
+
+      delete :destroy, id: round.id
+      expect(response).to redirect_to dashboard_path
+      round = Round.find_by(id: round.id)
+      expect(round).to eq nil
+    end
+  end
+end
+</code></pre>
+      </div>
+      <p class="case-study-text">
+        <br /><br />
+        I hope that you enjoyed the write up of what is going on 'under the hood' with TrakStats! Here is the link to the site so you can see
+        it in action!
+        <br /><br />
+      </p>
+      <div class="trak-image">
+        <a href="https://trakstats.herokuapp.com" target="_blank"><img src="trak2.png" class="img-responsive"/></a>
+      </div>
+  </div>
+</body>
+</html>

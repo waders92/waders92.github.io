@@ -1,3 +1,31 @@
+.case {
+  margin-top: 100px;
+}
+
+.blue {
+  border-top: 5px double #1D446B;
+  width: 250px;
+}
+
+.box {
+  background-color: lightgray;
+}
+
+.trak-image {
+  margin-bottom: 50px;
+}
+
+.case-study-text {
+  font-size: 24px;
+  font-family: 'Open Sans Condensed', sans-serif;
+  color: #1D446B;
+  letter-spacing: 1.5px;
+}
+
+.case-study-h {
+  color: #1D446B;
+}
+
 .top a {
   padding: 15px;
   margin: 5px;
@@ -101,7 +129,7 @@ button.navbar-toggle.collapsed {
 }
 
 .git img, .git2 img {
-  height: 28px;
+  height: 45px;
   transition: all .2s ease-in-out;
 }
 
@@ -139,8 +167,9 @@ button.navbar-toggle.collapsed {
   color: white;
 }
 
+
 .caption p{
-  font-size: 15px;
+  font-size: 20px;
   font-family: 'Mukta Vaani', sans-serif;
 }
 
