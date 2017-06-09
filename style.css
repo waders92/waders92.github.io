@@ -1,5 +1,10 @@
 .icons {
-  margin-bottom: 50px;
+  margin-bottom: 75px;
+}
+
+button {
+  color: white;
+  background-color: #1D446B;
 }
 
 .case {
@@ -314,7 +319,7 @@ p.text-center.job {
 }
 
 .golf img {
-   box-shadow: 0px 3px 8px #2a2a2a;
+
 }
 
 /******* ipad *********/
