@@ -2,6 +2,10 @@
   margin-bottom: 75px;
 }
 
+.trak-image img {
+   box-shadow: 3px 3px 3px darkgray;
+}
+
 button {
   color: white;
   background-color: #1D446B;
@@ -307,19 +311,9 @@ p.text-center.job {
   font-size: 18px;
 }
 
-.slogan p {
-  margin-top: 25px;
-  font-family: 'Reenie Beanie', cursive;
-  font-size: 3em;
-}
-
 .lastarrow {
   margin-left: auto;
   margin-right: auto;
-}
-
-.golf img {
-
 }
 
 /******* ipad *********/
