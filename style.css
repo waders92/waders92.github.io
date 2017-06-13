@@ -395,9 +395,11 @@ p.text-center.job {
       height: 500px;
       margin-bottom: 10px;
     }
-    .examples .examples-inner {
+    .thumbnail {
       width: 100%;
-      float: left !important;
+    }
+    .git {
+      width: 100%;
     }
     .contact p {
       margin-top: 25px;
@@ -442,12 +444,14 @@ p.text-center.job {
       height: 500px;
       margin-bottom: 10px;
     }
-    .examples .examples-inner {
-      width: 100%;
-      float: left !important;
-    }
     .contact p {
       margin-top: 25px;
+    }
+    .thumbnail {
+      width: 100%;
+    }
+    .git {
+      width: 100%;
     }
     .icons {
       margin-top: -75px;
@@ -458,12 +462,5 @@ p.text-center.job {
     .name img {
       height: 200px;
       width: 200px;
-    }
-}
-
-@media only screen and (max-width: 768px) {
-    /* For mobile phones: */
-    [class*="col-"] {
-        width: 100%;
     }
 }
