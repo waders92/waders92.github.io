@@ -408,7 +408,11 @@ p.text-center.job {
       margin-top: -75px;
     }
     .bg {
-      height: 500px;
+      height: 900px;
+    }
+    .name img {
+      height: 100px;
+      width: 100px;
     }
 }
 
@@ -453,6 +457,10 @@ p.text-center.job {
       margin-top: -75px;
     }
     .bg {
-      height: 500px;
+      height: 900px;
+    }
+    .name img {
+      height: 100px;
+      width: 100px;
     }
 }
