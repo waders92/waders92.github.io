@@ -398,11 +398,8 @@ p.text-center.job {
     .examples-inner {
       width: 100%;
     }
-    [class*="col-"] {
-        width: 100%;
-    }
     .contact p {
-      margin-top: 10px;
+      margin-top: 25px;
     }
     .icons {
       margin-top: -75px;
@@ -411,8 +408,8 @@ p.text-center.job {
       height: 900px;
     }
     .name img {
-      height: 100px;
-      width: 100px;
+      height: 200px;
+      width: 200px;
     }
 }
 
@@ -447,11 +444,8 @@ p.text-center.job {
     .examples-inner {
       width: 100%;
     }
-    [class*="col-"] {
-        width: 100%;
-    }
     .contact p {
-      margin-top: 10px;
+      margin-top: 25px;
     }
     .icons {
       margin-top: -75px;
@@ -460,7 +454,7 @@ p.text-center.job {
       height: 900px;
     }
     .name img {
-      height: 100px;
-      width: 100px;
+      height: 200px;
+      width: 200px;
     }
 }
