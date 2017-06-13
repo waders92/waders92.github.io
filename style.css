@@ -395,8 +395,9 @@ p.text-center.job {
       height: 500px;
       margin-bottom: 10px;
     }
-    .examples-inner {
+    .examples .examples-inner {
       width: 100%;
+      float: left !important;
     }
     .contact p {
       margin-top: 25px;
@@ -441,8 +442,9 @@ p.text-center.job {
       height: 500px;
       margin-bottom: 10px;
     }
-    .examples-inner {
+    .examples .examples-inner {
       width: 100%;
+      float: left !important;
     }
     .contact p {
       margin-top: 25px;
