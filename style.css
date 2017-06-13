@@ -360,6 +360,12 @@ p.text-center.job {
     [class*="col-"] {
         width: 100%;
     }
+    .contact p {
+      margin-top: 10px;
+    }
+    .icons {
+      margin-top: -75px;
+    }
 }
 /******* iphone 5 *********/
 @media only screen
@@ -390,10 +396,17 @@ p.text-center.job {
       margin-bottom: 10px;
     }
     .examples .examples-inner {
+      float: left;
       width: 100%;
     }
     [class*="col-"] {
         width: 100%;
+    }
+    .contact p {
+      margin-top: 10px;
+    }
+    .icons {
+      margin-top: -75px;
     }
 }
 
@@ -427,8 +440,15 @@ p.text-center.job {
     }
     .examples .examples-inner {
       width: 100%;
+      float: left;
     }
     [class*="col-"] {
         width: 100%;
+    }
+    .contact p {
+      margin-top: 10px;
+    }
+    .icons {
+      margin-top: -75px;
     }
 }
