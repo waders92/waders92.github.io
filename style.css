@@ -354,9 +354,6 @@ p.text-center.job {
       height: 500px;
       margin-bottom: 10px;
     }
-    [class*="col-"] {
-        width: 100%;
-    }
 }
 /******* iphone 5 *********/
 @media only screen
@@ -386,8 +383,8 @@ p.text-center.job {
       height: 500px;
       margin-bottom: 10px;
     }
-    [class*="col-"] {
-        width: 100%;
+    .examples {
+      width: 100%;
     }
 }
 
@@ -419,7 +416,7 @@ p.text-center.job {
       height: 500px;
       margin-bottom: 10px;
     }
-    [class*="col-"] {
-        width: 100%;
+    .examples {
+      width: 100%;
     }
 }
