@@ -395,8 +395,7 @@ p.text-center.job {
       height: 500px;
       margin-bottom: 10px;
     }
-    .examples .examples-inner {
-      float: left;
+    .examples-inner {
       width: 100%;
     }
     [class*="col-"] {
@@ -407,6 +406,9 @@ p.text-center.job {
     }
     .icons {
       margin-top: -75px;
+    }
+    .bg {
+      height: 500px;
     }
 }
 
@@ -438,9 +440,8 @@ p.text-center.job {
       height: 500px;
       margin-bottom: 10px;
     }
-    .examples .examples-inner {
+    .examples-inner {
       width: 100%;
-      float: left;
     }
     [class*="col-"] {
         width: 100%;
@@ -450,5 +451,8 @@ p.text-center.job {
     }
     .icons {
       margin-top: -75px;
+    }
+    .bg {
+      height: 500px;
     }
 }
