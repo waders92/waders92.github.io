@@ -1,7 +1,3 @@
-.icons {
-  margin-bottom: 75px;
-}
-
 .trak-image img {
    box-shadow: 3px 3px 3px darkgray;
 }
@@ -230,13 +226,14 @@ button.navbar-toggle.collapsed {
 .contact h3 {
   color: #1D446B;
   padding-top: 75px;
+  margin-bottom: 75px;
 }
 
 .contact p {
   font-family: 'Mukta Vaani', sans-serif;
   font-size: 16px;
   letter-spacing: 2px;
-  margin-top: 80px;
+  margin-top: 10px;
 }
 
 .bio {
