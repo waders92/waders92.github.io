@@ -11,6 +11,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <script src="scroll.js"></script>
+<script src="form.js"></script>
 <body>
   <nav class="navbar navbar-default navbar-fixed-top" role="navigation" id="top">
     <div class="container-fluid">
@@ -155,7 +156,10 @@
       (Drop me a note! Let me know how I can help you!)
     </p>
     <br />
-      <form class="col-xs-6 col-xs-offset-3" method="POST" action="http://formspree.io/wade.carlson@pga.com" style="border: 2px solid #1D446B;">
+      <form class="col-xs-6 col-xs-offset-3" id='contact_form' method='POST' style="border: 2px solid #1D446B;">
+        <p class="info" id='thanks' style='display: none;'>
+          Thanks for contacting me, I'll be in touch soon!
+        </p>
         <p>Name</p> <input type="text" name="name">
         <p>Email</p> <input type="email" name="email"><br /><br />
         <p>Message</p>
