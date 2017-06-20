@@ -412,7 +412,10 @@ p.text-center.job {
       width: 200px;
     }
     textarea {
-      width: 50%;
+      width: 75%;
+    }
+    input {
+      width: 80%;
     }
 }
 
@@ -464,6 +467,9 @@ p.text-center.job {
       width: 200px;
     }
     textarea {
-      width: 50%;
+      width: 75%;
+    }
+    input {
+      width: 80%;
     }
 }
