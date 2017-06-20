@@ -416,12 +416,6 @@ p.text-center.job {
     input {
       width: 80%;
     }
-    p#mobile {
-      display: flex;
-    }
-    p.case-study-text{
-      display: none;
-    }
 }
 
 
@@ -477,11 +471,5 @@ p.text-center.job {
     }
     input {
       width: 80%;
-    }
-    p#mobile {
-      display: flex;
-    }
-    p.case-study-text {
-      display: none;
     }
 }
