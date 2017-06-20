@@ -2,6 +2,10 @@
    box-shadow: 3px 3px 3px darkgray;
 }
 
+p#mobile {
+  display: none;
+}
+
 .case {
   margin-top: 100px;
 }
