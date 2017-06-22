@@ -6,6 +6,10 @@ p#mobile {
   display: none;
 }
 
+#first, #second, #third {
+  display: none;
+}
+
 .case {
   margin-top: 100px;
 }
