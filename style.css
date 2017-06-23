@@ -400,6 +400,9 @@ p.text-center.job {
     .bg {
       height: 400px;
     }
+    .no-mobile {
+      display: none;
+    }
 }
 /******* iphone 5 *********/
 @media only screen
@@ -476,6 +479,9 @@ p.text-center.job {
     }
     #first {
       margin-top: 1px;
+    }
+    .no-mobile {
+      display: none;
     }
 }
 
@@ -555,5 +561,8 @@ p.text-center.job {
     }
     #first {
       margin-top: 1px;
+    }
+    .no-mobile {
+      display: none;
     }
 }
