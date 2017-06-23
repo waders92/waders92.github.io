@@ -6,6 +6,10 @@ p#mobile {
   display: none;
 }
 
+#mobile-only {
+  display: none;
+}
+
 #first, #second, #third, #fourth {
   display: none;
 }
@@ -403,7 +407,10 @@ p.text-center.job {
       display: none;
     }
     #mobile-only {
-      display: list-item;
+      display: block;
+    }
+    h3 {
+      font-size: 2rem;
     }
 }
 /******* iphone 5 *********/
@@ -485,7 +492,10 @@ p.text-center.job {
       display: none;
     }
     #mobile-only {
-      display: list-item;
+      display: block;
+    }
+    h3 {
+      font-size: 2rem;
     }
 }
 
@@ -569,6 +579,9 @@ p.text-center.job {
       display: none;
     }
     #mobile-only {
-      display: list-item;
+      display: block;
+    }
+    h3 {
+      font-size: 2rem;
     }
 }
