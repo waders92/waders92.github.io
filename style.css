@@ -379,10 +379,15 @@ p.text-center.job {
     .icons {
       margin-top: -75px;
     }
-
     .name img {
-      height: 25px;
+      height: 40px;
       margin-top: -100px
+    }
+    #frmmobile {
+      display: none;
+    }
+    #frm2mobile {
+      display: none;
     }
 }
 /******* iphone 5 *********/
@@ -429,7 +434,7 @@ p.text-center.job {
       height: 900px;
     }
     .name img {
-      height: 25px;
+      height: 40px;
       margin-top: -100px
     }
     textarea {
@@ -446,6 +451,12 @@ p.text-center.job {
     }
     .contact h3 {
       padding-top: 50px;
+    }
+    #frmmobile {
+      display: none;
+    }
+    #frm2mobile {
+      display: none;
     }
 }
 
@@ -494,7 +505,7 @@ p.text-center.job {
       height: 900px;
     }
     .name img {
-      height: 25px;
+      height: 40px;
       margin-top: -100px
     }
     textarea {
@@ -511,5 +522,11 @@ p.text-center.job {
     }
     .contact h3 {
       padding-top: 50px;
+    }
+    #frmmobile {
+      display: none;
+    }
+    #frm2mobile {
+      display: none;
     }
 }
