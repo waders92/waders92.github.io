@@ -369,6 +369,7 @@ p.text-center.job {
     .contact {
       height: 500px;
       margin-bottom: 10px;
+      margin-top: 0px;
     }
     [class*="col-"] {
         width: 100%;
@@ -417,6 +418,7 @@ p.text-center.job {
     .contact {
       height: 500px;
       margin-bottom: 10px;
+      margin-top: 0px;
     }
     .thumbnail {
       width: 100%;
@@ -488,6 +490,7 @@ p.text-center.job {
     .contact {
       height: 500px;
       margin-bottom: 10px;
+      margin-top: 0px;
     }
     .contact p {
       margin-top: 25px;
