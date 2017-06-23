@@ -338,6 +338,10 @@ p.text-center.job {
     [class*="col-"] {
         width: 100%;
     }
+    .name img {
+      height: 25px;
+      margin-top: -100px
+    }
 }
 /******* iphone 6 *********/
 @media only screen
@@ -374,6 +378,11 @@ p.text-center.job {
     }
     .icons {
       margin-top: -75px;
+    }
+
+    .name img {
+      height: 25px;
+      margin-top: -100px
     }
 }
 /******* iphone 5 *********/
@@ -420,8 +429,8 @@ p.text-center.job {
       height: 900px;
     }
     .name img {
-      height: 200px;
-      width: 200px;
+      height: 25px;
+      margin-top: -100px
     }
     textarea {
       width: 75%;
@@ -485,8 +494,8 @@ p.text-center.job {
       height: 900px;
     }
     .name img {
-      height: 200px;
-      width: 200px;
+      height: 25px;
+      margin-top: -100px
     }
     textarea {
       width: 75%;
