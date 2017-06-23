@@ -10,6 +10,10 @@ p#mobile {
   display: none;
 }
 
+#third {
+  margin-top: 100px;
+}
+
 .case {
   margin-top: 100px;
 }
@@ -292,6 +296,11 @@ button.navbar-toggle.collapsed {
 }
 
 .name img {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.name2 img {
   height: 250px;
   width: 250px;
   margin-left: auto;
