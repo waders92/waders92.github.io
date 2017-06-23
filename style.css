@@ -10,7 +10,7 @@ p#mobile {
   display: none;
 }
 
-#third {
+#third, #first {
   margin-top: 100px;
 }
 
@@ -391,8 +391,11 @@ p.text-center.job {
       display: none;
     }
     .name2 img {
-      height: 100px;
-      width: 100px;
+      height: 150px;
+      width: 150px;
+    }
+    #first {
+      margin-top: 1px;
     }
 }
 /******* iphone 5 *********/
@@ -465,8 +468,11 @@ p.text-center.job {
       display: none;
     }
     .name2 img {
-      height: 100px;
-      width: 100px;
+      height: 150px;
+      width: 150px;
+    }
+    #first {
+      margin-top: 1px;
     }
 }
 
@@ -541,7 +547,10 @@ p.text-center.job {
       display: none;
     }
     .name2 img {
-      height: 100px;
-      width: 100px;
+      height: 150px;
+      width: 150px;
+    }
+    #first {
+      margin-top: 1px;
     }
 }
