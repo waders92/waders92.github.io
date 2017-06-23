@@ -403,6 +403,9 @@ p.text-center.job {
     .no-mobile {
       display: none;
     }
+    #mobile-only {
+      display: inline-block;
+    }
 }
 /******* iphone 5 *********/
 @media only screen
@@ -482,6 +485,9 @@ p.text-center.job {
     }
     .no-mobile {
       display: none;
+    }
+    #mobile-only {
+      display: inline-block;
     }
 }
 
@@ -564,5 +570,8 @@ p.text-center.job {
     }
     .no-mobile {
       display: none;
+    }
+    #mobile-only {
+      display: inline-block;
     }
 }
