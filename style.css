@@ -354,6 +354,7 @@ p.text-center.job {
   and (-webkit-min-device-pixel-ratio: 2) {
     .icons img {
       height: 45px;
+      width: 45px;
       margin: 15px;
       margin-top: 35px;
     }
@@ -412,6 +413,9 @@ p.text-center.job {
     h3 {
       font-size: 2rem;
     }
+    #mobile-only ul li {
+      list-style: none;
+    }
 }
 /******* iphone 5 *********/
 @media only screen
@@ -421,6 +425,7 @@ p.text-center.job {
   and (orientation: portrait) {
     .icons img {
       height: 45px;
+      width: 45px;
       margin: 5px;
       margin-top: 35px;
     }
@@ -497,6 +502,9 @@ p.text-center.job {
     h3 {
       font-size: 2rem;
     }
+    #mobile-only ul li {
+      list-style: none;
+    }
 }
 
 
@@ -508,6 +516,7 @@ p.text-center.job {
   and (orientation: landscape) {
     .icons img {
       height: 45px;
+      width: 45px;
       margin: 15px;
       margin-top: 35px;
     }
@@ -583,5 +592,8 @@ p.text-center.job {
     }
     h3 {
       font-size: 2rem;
+    }
+    #mobile-only ul li {
+      list-style: none;
     }
 }
