@@ -15,7 +15,7 @@ mark, .mark {
   color: #777777;
 }
 .text-primary {
-  color: #3551fe;
+  color: #edc23f;
 }
 p {
   font-size: 14px;
@@ -105,8 +105,8 @@ fieldset[disabled] .btn-primary.active {
 }
 .btn-xl {
   color: white;
-  background-color: #fed136;
-  border-color: #fed136;
+  background-color: #edc23f;
+  border-color: #edc23f;
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   font-weight: 700;
